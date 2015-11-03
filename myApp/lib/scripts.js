@@ -1,9 +1,10 @@
-var db = require('monk')('mongodb://heroku_vbdmg9sp:nq5khc88f4nusoreigad2qqdu9@ds045684.mongolab.com:45684/heroku_vbdmg9sp' || 'localhost/galleries-demo');
+var db = require('monk')('mongodb://heroku_4x9wvl5s:rpa80nemv6pbc9sk3fu2jd3j3p@ds049094.mongolab.com:49094/heroku_4x9wvl5s');
 var Galleries = db.get('galleries');
 var Photos = db.get('photos');
 var Users = db.get('users');
 var bcrypt = require('bcrypt');
-
+ // || 'localhost/galleries-demo'
+// mongodb://heroku_4x9wvl5s:rpa80nemv6pbc9sk3fu2jd3j3p@ds049094.mongolab.com:49094/heroku_4x9wvl5s
 var Helper = {
   signin : function(email, password) {
   var errors = [];
