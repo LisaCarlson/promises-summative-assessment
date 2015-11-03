@@ -1,0 +1,40 @@
+extends ../layout
+
+block content
+  nav.navbar.navbar-default
+    .container-fluid
+      .navbar-header
+        button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1', aria-expanded='false')
+          span.sr-only Toggle navigation
+          span.icon-bar
+          span.icon-bar
+          span.icon-bar
+        a.navbar-brand(href='/galleries') Gallery
+      ul.nav.navbar-nav.navbar-right
+        li
+          h4.navbar-text 
+            i(class='glyphicon glyphicon-user')  
+              span.user #{username}
+        li
+          a(href='/users/logout') Log Out
+  .container
+    .page-header 
+      h1 Edit   
+        small.text-warning edit this photo
+    .row
+      .col-md-4
+        .thumbnail
+          img(src= photo.img, alt='pic1')
+          .caption
+            h3= photo.name
+      .col-md-6.col-md-offset-2
+        form(action='/galleries/' + gallery._id + '/photos/' + photo._id, method='post')
+          label(for='name') Name
+          input.form-control(type='text' name='name' id='name' value= photo.name)
+          label(for='url') Url
+          input.form-control(type='text' name='url' id='name' value= photo.img)
+          button#edit.btn.btn-info(type='submit') Update Photo
+        form(action='/galleries/' + gallery._id + '/photos/' + photo._id + '/delete', method='post')
+          button#delete.btn.btn-danger Delete Photo
+
+

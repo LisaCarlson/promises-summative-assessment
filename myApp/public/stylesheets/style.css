@@ -1,0 +1,55 @@
+body {
+  font-size: 16px;
+  font-family: "Poiret One";
+}
+
+a, h1, h2, h3, h4, span, button {
+  font-family: "Poiret One";
+  font-weight: bold;
+}
+
+span, a, i {
+  color: #fff;
+}
+
+nav.navbar.navbar-default {
+  background-color: #939393;
+}
+
+.thumbnail {
+  box-shadow: 0 0 5px 5px #fff;
+}
+
+.right {
+  float: right;
+}
+
+.add {
+  margin-bottom: 30px;
+}
+
+.margin-bottom {
+  margin-bottom: 30px;
+}
+
+label {
+  margin-top: 10px;
+}
+
+input {
+  margin-bottom: 20px;
+}
+
+form {
+  background: #696969;
+  box-shadow: 0 0 5px 10px #696969;
+}
+
+#edit, #delete {
+  margin: 10px;
+}
+
+.thumbnail > img {
+  width: 350px;
+  height: 350px;
+}
